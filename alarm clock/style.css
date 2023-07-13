@@ -1,0 +1,166 @@
+body{
+    background:lightskyblue;
+    font-family: Cambria;
+}
+#alarm_clock{
+    position: relative;
+}
+
+#clock{
+    position: relative;
+    width: 800px;
+    height: 250px;
+    border: 20px solid wheat;
+    margin: 50px auto;
+    font-size: 7em;
+    text-align: center;
+    vertical-align: auto;
+    padding-top:100px;
+    color: wheat;
+}
+
+
+#setting{
+    position: relative;
+    width: 820px;
+    height: 100px;
+    border: 1px solid wheat;
+    margin:auto;
+}
+
+form > label{
+    display: inline-block;
+    font-size: 1em;
+    padding:7px 6px;
+}
+
+select{
+    width:50px;
+    height: 25px;
+    font-size:1.2em;
+    color:darkslategrey;
+    border: wheat;
+    outline: none;
+}
+
+input{
+    max-width: 100%;
+    height: 25px;
+
+}
+
+.heading{
+    text-align: center;
+    font-family: Cambria;
+    font-weight: bold;
+    margin-top: 80px;
+    color:wheat;
+}
+
+
+button{
+    width: 100%;
+    display: block;
+    height: auto;
+    padding: 10px 10px;
+    background-color: wheat;
+    border: wheat;
+    font-size: 2em;
+    margin-top:3.9px;
+    color:grey;
+    font-family: Cambria;
+}
+
+/* Media Query for 1000px */
+
+@media  screen and (max-width: 1000px) {
+    body{
+        font-size: 40%;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    #clock{
+        margin:20px auto;
+        width: 450px;
+        height: 150px;
+        font-size: 9em;
+    }    
+
+    .heading{
+        font-size: 4em;
+        margin-top:20px;
+    }
+
+    #setting{
+        width:450px;
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    select{
+        min-width: 100%;
+        height: 50px;
+        font-size: 3em;
+    }
+    
+    label > input{
+        height: 50px;
+        font-size: 3em;
+    }
+
+    form > label{
+        display: block;
+        font-size: 2.5em;
+    }
+
+}
+
+/* Media query for 550px */
+
+
+@media screen and (max-width:550px) {
+    
+    body{
+        font-size: 90%;
+    }
+
+    #clock{
+        width: 350px;
+        height: 100px;
+        font-size: 3em;
+        margin: 20px auto;
+        padding-top:50px;
+    }    
+
+    .heading{
+        font-size: 2em;
+        margin-top:20px;
+        margin-bottom: 0;    
+    }
+
+    #setting{
+        width:350px;
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    select{
+        min-width: 100%;
+        height: 50px;
+        font-size: 1.5em;
+    }
+    
+    label > input{
+        height: 50px;
+        font-size: 1.5em;
+    }
+
+    form > label{
+        display: block;
+        font-size: 1.5em;
+    }
+
+
+}
+
+
