@@ -73,6 +73,8 @@ btn.addEventListener('click', function(){
         secondUI.children[0].setAttribute("selected", 0);
         fileUI.value = "";
         this.textContent = 'SET ALARM';
+        active = false;
+        audio.currentTime = 0;
         audio.pause();
 
     }
