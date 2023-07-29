@@ -182,7 +182,7 @@ function getSeries(series){
     });
 }
 
-
+/*
 function getStories(stories){
     getData(stories).then(result => {
         
@@ -236,7 +236,7 @@ function getStories(stories){
 
 }
      
-
+*/
 
 getStories(stories);
 getSeries(series);
