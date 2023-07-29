@@ -30,7 +30,7 @@ let thumbnail = document.getElementById('thumbnail');
 
 async function getData(url){
     let response = await fetch(url,{
-        method: "POST", 
+        method: "GET", 
         mode: "cors", 
         cache: "no-cache",
         credentials: "same-origin", 
