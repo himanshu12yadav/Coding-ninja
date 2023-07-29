@@ -14,7 +14,8 @@ console.log(character);
 let comics = `https://gateway.marvel.com:443/v1/public/characters/${characterId}/comics?ts=${timestamp}&apikey=${publickey1}&hash=${md5}`;
 let series = `https://gateway.marvel.com:443/v1/public/characters/${characterId}/series?ts=${timestamp}&apikey=${publickey1}&hash=${md5}`;
 let events = `https://gateway.marvel.com:443/v1/public/characters/${characterId}/events?ts=${timestamp}&apikey=${publickey1}&hash=${md5}`;
-let stories = `https://gateway.marvel.com:443/v1/public/characters/${characterId}/stories?ts=${timestamp}&apikey=${publickey1}&hash=${md5}`;
+
+// let stories = `https://gateway.marvel.com:443/v1/public/characters/${characterId}/stories?ts=${timestamp}&apikey=${publickey1}&hash=${md5}`;
 
 
 
@@ -22,7 +23,7 @@ let title = document.getElementById('title');
 let comics_collection = document.getElementById('comics_collection');
 let events_collection = document.getElementById('events_collection');
 let series_collection = document.getElementById('series_collection');
-let stories_collection = document.getElementById('stories_collection');
+// let stories_collection = document.getElementById('stories_collection');
 let thumbnail = document.getElementById('thumbnail');
 
 
