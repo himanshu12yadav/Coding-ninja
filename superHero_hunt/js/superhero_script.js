@@ -183,63 +183,6 @@ function getSeries(series){
     });
 }
 
-/*
-function getStories(stories){
-    getData(stories).then(result => {
-        
-        if (result.length !== 0){
-            for (let el of result){ 
-        
-                el.comics.items.forEach(el => {
-                    let link = `${el.resourceURI}?ts=${timestamp}&apikey=${publickey1}&hash=${md5}`;
-                    getData(link).then(result =>{
-    
-                            let thumbnail = '';
-                            if (result[0].thumbnail !== 'undefined' || result[0].thumbnail.length !== 0){
-                                thumbnail = `${result[0].thumbnail.path}.${result[0].thumbnail.extension}`;
-                            }
-
-
-   
-                            let div = document.createElement('div');
-                            div.setAttribute('class','card m-2');
-                            div.style.width = `${18}rem`;
-            
-                            let card_body = document.createElement('div');
-                            card_body.setAttribute('class', "card-body");
-                          
-                            let imgElment = document.createElement('img');
-                            imgElment.setAttribute('class', 'img-fluid');
-                            imgElment.style.aspectRatio = 1/1;
-                            let h5 = document.createElement('h5');
-                            h5.className = 'card-title';
-                            h5.innerText = `${result[0].title}`;
-                            imgElment.src = `${thumbnail}`;
-                            imgElment.alt = `${result[0].title}`;
-            
-                            div.appendChild(imgElment);
-                            div.appendChild(card_body);
-                            card_body.appendChild(h5);
-                            
-                            stories_collection.insertAdjacentElement('afterbegin', div);
-                    })
-                })
-            }
-        }else{ 
-
-            stories_collection.insertAdjacentHTML('afterbegin', '<h1 class="text-center" style="color:white;padding:4rem"; > NO STORIES AVAILABLE </h1>');  
-    
-        }
-        
-
-
-    })
-
-}
-     
-*/
-
-getStories(stories);
 getSeries(series);
 getEvents(events);
 getComics(comics);
