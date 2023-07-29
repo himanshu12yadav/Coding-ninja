@@ -29,7 +29,11 @@ let thumbnail = document.getElementById('thumbnail');
 
 
 async function getData(url, req){
-    let response = await fetch(url, req);
+    let request;
+    if (req){
+        request = req;
+    }
+    let response = await fetch(url, request={});
     let json = await response.json();
     let data = await json.data;
     let result = await data.results;
