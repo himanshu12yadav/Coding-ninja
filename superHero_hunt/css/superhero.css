@@ -1,0 +1,12 @@
+#comics_collection, #series_collection, #stories_collection, #events_collection{
+    border:solid;
+    border-color:bisque;
+    background-color: black;
+}
+
+#thumbnail{
+    color:white;
+    background-color: red;
+    padding:5rem;
+    
+}
