@@ -28,19 +28,8 @@ let thumbnail = document.getElementById('thumbnail');
 
 
 
-async function getData(url){
-    let response = await fetch(url,{
-        method: "GET", 
-        mode: "cors", 
-        cache: "no-cache",
-        credentials: "same-origin", 
-        headers: {
-          "Content-Type": "application/json",
-        },
-        redirect: "follow", // manual, *follow, error
-        referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-        body: JSON.stringify(data),
-    });
+async function getData(url, req){
+    let response = await fetch(url, req);
     let json = await response.json();
     let data = await json.data;
     let result = await data.results;
@@ -201,7 +190,18 @@ function getStories(stories){
         
                 el.comics.items.forEach(el => {
                     let link = `${el.resourceURI}?ts=${timestamp}&apikey=${publickey1}&hash=${md5}`;
-                    getData(link).then(result =>{
+                    getData(link,{
+        method: "GET", 
+        mode: "cors", 
+        cache: "no-cache",
+        credentials: "same-origin", 
+        headers: {
+          "Content-Type": "application/json",
+        },
+        redirect: "follow", // manual, *follow, error
+        referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+        body: JSON.stringify(data),
+    }).then(result =>{
     
                             let thumbnail = '';
                             if (result[0].thumbnail !== 'undefined' || result[0].thumbnail.length !== 0){
