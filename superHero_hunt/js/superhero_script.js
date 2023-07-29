@@ -1,7 +1,3 @@
-const publickey = '01e80748a8fdf0fdd8a9765da51f2ced';
-const privatekey = 'd7603090ceebbc48efd87944dbc047bc77448cf4';
-
-
 const publickey1 = '6299478504c2372341a2c425a0f055f9';
 const privatekey1 = '3728446e3af6e38c7d19fb9f314788ee9f5e3bed';
 
@@ -33,7 +29,18 @@ let thumbnail = document.getElementById('thumbnail');
 
 
 async function getData(url){
-    let response = await fetch(url);
+    let response = await fetch(url,{
+        method: "POST", 
+        mode: "cors", 
+        cache: "no-cache",
+        credentials: "same-origin", 
+        headers: {
+          "Content-Type": "application/json",
+        },
+        redirect: "follow", // manual, *follow, error
+        referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+        body: JSON.stringify(data),
+    });
     let json = await response.json();
     let data = await json.data;
     let result = await data.results;
