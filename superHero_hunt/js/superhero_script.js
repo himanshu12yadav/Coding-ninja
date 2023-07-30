@@ -7,27 +7,25 @@ let timestamp = new Date().valueOf();
 let md5 = CryptoJS.MD5(timestamp + privatekey1 + publickey1).toString();
 
 let characterId = localStorage.getItem('id');
-// console.log(characterId);
 
+// below are the end point for api we using
 const character = `https://gateway.marvel.com:443/v1/public/characters/${characterId}?ts=${timestamp}&apikey=${publickey1}&hash=${md5}`;
-console.log(character);
 let comics = `https://gateway.marvel.com:443/v1/public/characters/${characterId}/comics?ts=${timestamp}&apikey=${publickey1}&hash=${md5}`;
 let series = `https://gateway.marvel.com:443/v1/public/characters/${characterId}/series?ts=${timestamp}&apikey=${publickey1}&hash=${md5}`;
 let events = `https://gateway.marvel.com:443/v1/public/characters/${characterId}/events?ts=${timestamp}&apikey=${publickey1}&hash=${md5}`;
 
-// let stories = `https://gateway.marvel.com:443/v1/public/characters/${characterId}/stories?ts=${timestamp}&apikey=${publickey1}&hash=${md5}`;
 
-
+// accessing a tag in html file
 
 let title = document.getElementById('title');
 let comics_collection = document.getElementById('comics_collection');
 let events_collection = document.getElementById('events_collection');
 let series_collection = document.getElementById('series_collection');
-// let stories_collection = document.getElementById('stories_collection');
 let thumbnail = document.getElementById('thumbnail');
 
 
 
+// extract a data from end point
 
 async function getData(url){
 
@@ -38,8 +36,9 @@ async function getData(url){
     return result;
 }
 
-getData(character).then(result=> { console.log(result[0])
-    
+// display a structure with information
+
+getData(character).then(result=> { 
 
     let html = `
          <div class="col-lg-4 col-md-8 m-auto">
@@ -52,7 +51,7 @@ getData(character).then(result=> { console.log(result[0])
 
 });
 
-
+// display comics for character selected
 
 function getComics(comics){
     getData(comics).then(result => {
@@ -95,6 +94,9 @@ function getComics(comics){
 
        });    
 }
+
+
+// display event for a character
 
 function getEvents(events){
     getData(events).then(result =>{
@@ -140,7 +142,7 @@ function getEvents(events){
     });
 }
 
-
+// display series
 
 function getSeries(series){
     getData(series).then(result => {
