@@ -1,21 +1,7 @@
-/**
- * public key:
- * 01e80748a8fdf0fdd8a9765da51f2ced
- */
-
-
-/**
- * public: aeb538db1d4a505fd0824863de4769b7
- * private: b041ae8a433b9d2fc6e4aa7e33a3f9f1361bef23
- */
-
+// public and private key for api
 const publickey1 = '6299478504c2372341a2c425a0f055f9';
 const privatekey1 = '3728446e3af6e38c7d19fb9f314788ee9f5e3bed';
 
-
-
-const publickey = '01e80748a8fdf0fdd8a9765da51f2ced';
-const privatekey = 'd7603090ceebbc48efd87944dbc047bc77448cf4';
 let timestamp = new Date().valueOf();
 let md5 = CryptoJS.MD5(timestamp + privatekey1 + publickey1).toString();
 
@@ -35,7 +21,7 @@ if (pre){
 }
 
 
-
+// This function extract data from url.
 async function getData(){
         if (localStorage.getItem('fetchData') === null){
             let response = await fetch(url);
@@ -271,6 +257,7 @@ getData().then(result => {
 
 });
 
+// function cleared when their search
 
 function clearScreen(){
     heros.innerHTML = "";
@@ -278,7 +265,7 @@ function clearScreen(){
 }
 
 
-
+// This function set localStorage key and value pair 
 
 document.addEventListener('click', function(e){
 
