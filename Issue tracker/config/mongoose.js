@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://0.0.0.0:27017/issue_tracker_app')
+mongoose.connect('mongodb+srv://himanshu:2022Himanshu@cluster0.0g6foej.mongodb.net/?retryWrites=true&w=majority')
 
 const db = mongoose.connection;
 
