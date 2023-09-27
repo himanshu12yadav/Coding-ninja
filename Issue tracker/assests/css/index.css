@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  display: grid;
+  grid-template-rows: minmax(5rem, 10rem) minmax(5rem, 10rem) minmax(10rem, 1fr) minmax(5rem, 10rem);
+  grid-template-columns: minmax(2rem, 4rem) repeat(4, minmax(min-content, 1fr)) minmax(2rem, 1fr) minmax(2rem, 1fr) repeat(4, minmax(min-content, 1fr)) minmax(2rem, 4rem);
+  background-color: #1B3B6F; }
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(min-content, 10rem));
+  grid-column: 1/13;
+  grid-row: 1/2;
+  background-color: #21295C;
+  justify-items: end; }
+  nav .nav__header {
+    align-self: center;
+    justify-self: center;
+    grid-column: 1/ span 2; }
+    nav .nav__header a {
+      text-decoration: none;
+      font-size: 3em;
+      color: #065A82; }
+
+.create {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(4rem, 1fr));
+  grid-row: 2/3;
+  grid-column: 1/-1;
+  background-color: #1B3B6F;
+  align-items: center; }
+  .create__issue {
+    background-color: #065A82;
+    text-align: center;
+    grid-column: 3/4;
+    padding: 1rem; }
+    .create__issue a {
+      font-size: 2.5em;
+      text-decoration: none;
+      color: #21295C; }
+
+.content {
+  display: grid;
+  grid-row: 3/4;
+  grid-column: 2/12;
+  background-color: #1B3B6F;
+  grid-template-rows: minmax(2rem, 1fr) minmax(3rem, max-content) 2rem; }
+  .content__table {
+    grid-row: 2/3;
+    grid-column: 1/10;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(min-content, 1fr)); }
+    .content__table table {
+      grid-column: 1/-1;
+      background-color: #065A82;
+      text-align: center;
+      color: #21295C;
+      border: 0.1rem solid #21295C;
+      border-collapse: collapse; }
+      .content__table table thead td {
+        border: 0.1rem solid #21295C;
+        height: 2.5rem;
+        font-size: 1.4em;
+        font-weight: bold; }
+      .content__table table tbody td {
+        border: 0.1rem solid #21295C;
+        font-size: 1.5em; }
+        .content__table table tbody td button {
+          width: 100%;
+          height: 4rem;
+          border: none;
+          background-color: #21295C; }
+          .content__table table tbody td button a {
+            text-decoration: none;
+            color: #065A82;
+            font-weight: bold; }
+      .content__table table tbody td:last-child {
+        width: 18rem; }

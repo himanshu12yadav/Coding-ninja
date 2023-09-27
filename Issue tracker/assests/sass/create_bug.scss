@@ -1,0 +1,94 @@
+.create__bug{   
+    grid-row:2/4;
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(5rem, 1fr));
+    grid-template-rows: repeat(6, minmax(3rem, 1fr));
+
+    form{
+        grid-column: 4/10;
+        grid-row:2/6;
+        background-color: #065A82;
+        display: grid;
+        grid-template-rows: repeat(2, minmax(3rem, 1fr)) minmax(3rem, 1fr) repeat(3, minmax(3rem, 1fr));
+        margin:auto 0;
+        padding-top:5rem;
+        .form__group{
+            display: grid;
+            grid-template-rows: 3rem 4rem;
+            grid-row-gap: 1rem;
+            label, input{
+                display: block;
+            }
+
+            label{
+                font-size: 3em;
+                color:#21295C;
+                margin:0 2rem;
+            }
+
+            input{
+                margin:0 2rem;
+                border:none;
+                background-color:#21295C;
+                outline-style: none;
+                font-size: 1.5rem;
+                color:#065A82;
+                padding-left:2rem;
+            }
+
+            input[type="submit"]{
+                margin:2rem 2rem;
+                border:none;
+                height: 4rem;
+                background-color:#21295C;
+                outline-style: none;
+                font-size: 1.5rem;
+                color:#065A82;
+                font-weight: bold;
+              }
+        }
+
+        .form__group--select{
+            display: grid;
+            grid-template-rows: minmax(3rem, 1fr) minmax(3rem, 1fr);
+            
+            label{
+                font-size: 3em;
+                color:#21295C;
+                margin:0 2rem;
+            }
+
+            &__sub{
+                display: grid;
+                grid-template-columns: 70% 30%;
+                margin:0 2rem;
+
+                input{
+                    font-size: 1.5em;
+                    background-color: #21295C;
+                    border:none;
+                    color:#065A82;
+                    padding-left:2rem;
+                    outline:none;
+                }
+                
+                #select__bug{
+                    margin-left:1rem;
+                    border:none;
+                    border-bottom-color: #21295C;
+                    background-color:#21295C;
+                    outline-style: none;
+                    font-size: 1.5rem;
+                    color:#065A82;
+                    padding-left:2rem;
+                }
+            }
+            
+            }
+
+
+
+        }
+    }
+

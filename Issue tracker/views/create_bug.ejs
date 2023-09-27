@@ -1,0 +1,40 @@
+<%- include('partials/_header'); %>
+
+<div class="create__bug">
+    <form action="/issue_tracker/detail_page/bug/create?id=<%= project_id %>" method="post" id="create__bug--form">
+        <div class="form__group">
+            <label for="form__input--name">Title</label>
+            <input type="text" name="title" id="form__input--name">
+        </div>
+        <div class="form__group">
+            <label for="form__input--description">Description</label>
+            <input type="text" name="description" id="form__input--description">
+        </div>
+
+        <div class="form__group--select">
+            <label>Label</label>
+            <div class="form__group--select__sub">
+                <input type="text" name="labels" id="bug__list">
+                
+                <select id="select__bug">
+                    <option id="select" value="">Select Option</option>
+                    <% for (let label of labels[0].label){ %>
+                    <option><%= label %></option>
+                    <% } %>
+                </select>
+            </div>
+        </div>
+    
+        
+        <div class="form__group">
+            <label for="form__input--author">Author</label>
+            <input type="text" name="author" id="form__input--author">
+        </div>
+        <div class="form__group">
+            <input type="submit" value="Create Bug" id="btn">
+        </div>
+
+    </form>
+</div>
+
+<%- include('partials/_footer'); %>

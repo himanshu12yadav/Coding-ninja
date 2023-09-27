@@ -1,0 +1,34 @@
+<%- include('partials/_header'); %>
+
+<section class="create">
+    <div class="create__issue">
+        <a href="/issue_tracker/project">CREATE PROJECT</a>
+    </div>
+</section>
+<section class="content">
+    <div class="content__table">
+        <table>
+            <thead>
+                <tr>
+                    <td>NAME</td>
+                    <td>DESCRIPTION</td>
+                    <td>AUTHOR</td>
+                    <td>DETAILS</td>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (let list of lists){ %>
+                <tr>
+                    <td><%= list.name %></td>
+                    <td><%= list.description %></td>
+                    <td><%= list.author %></td>
+                    <td><button><a href="/issue_tracker/detail_page?id=<%= list._id %>">SHOW MORE</a></button></td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+<%- include('partials/_footer'); %>

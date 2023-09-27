@@ -1,0 +1,24 @@
+<%- include('partials/_header'); %>
+
+<div class="section__create__form">
+    <form action="/issue_tracker/project/create" method="post">
+        <div class="form__group">
+            <label for="form__input--name">Name</label>
+            <input type="text" name="name" id="form__input--name">
+        </div>
+        <div class="form__group">
+            <label for="form__input--description">Description</label>
+            <input type="text" name="description" id="form__input--description">
+        </div>
+        <div class="form__group">
+            <label for="form__input--author">Author</label>
+            <input type="text" name="author" id="form__input--author">
+        </div>
+        <div class="form__group">
+            <input type="submit" value="Create Project">
+        </div>
+
+    </form>
+</div>
+
+<%- include('partials/_footer'); %>

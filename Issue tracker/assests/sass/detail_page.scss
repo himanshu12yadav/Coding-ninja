@@ -1,0 +1,111 @@
+.tag-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    .tag{
+        margin: 0.7rem 0.7rem;
+        span{
+            width: 3rem;
+            margin:0.5rem 0;
+            padding:0.5rem 1rem;
+            background-color: #21295C;
+            border-radius: 2.5rem 2.5rem;
+            color:#065A82;
+            font-size: 1.2em;
+            
+            i{
+                margin:1rem 1rem;
+            }
+        }
+    }
+}
+
+.content{
+    form{
+        grid-column: 2/span 9;
+        grid-row:1/2;    
+        display:grid;
+        grid-template-rows: repeat(5, minmax(5rem, auto));    
+        row-gap: 1rem;
+        .form__control{
+            label{
+                font-size: 2em;
+                padding-bottom: 2rem;
+                color:#21295C;
+            }
+
+            input{
+                display: block;
+                width: 80%;
+                height: 3rem;
+                margin-top:1rem;
+                background-color: #21295C;
+                border:none;
+                outline:none;
+            }
+
+        }
+        
+        input[type=submit]{
+            width: 30%;
+            height: 4rem;
+            font-size: 1.8em;
+            color:#21295C;
+            background-color:#065A82;
+            border:none;
+            margin-top:0.5rem;
+            margin:auto;
+        }
+        
+        .form__select{
+
+            label{
+                font-size: 2em;
+                margin-bottom:0.5rem;
+                color:#21295C;
+            }
+
+            select{
+                width: 20%;
+                height: 4rem;
+                background-color: #21295C;
+                color:#065A82;
+                outline:none;
+                border:none;
+                margin-top:1rem;
+                
+            }
+
+            .list{
+                width: 80%;
+                display: flex;
+                flex-wrap: wrap;
+                background-color: #21295C;
+                height: 6rem;
+                #list__input{
+                    background-color: #21295C;
+                    border:none;
+                    outline:none;
+                    color:#065A82
+                }
+            }
+        }
+    
+    }
+
+}
+
+    
+.form__tag{
+    width: auto;
+    height: 2rem;
+    background-color: #065A82;
+    font-size: 1.2em;
+    margin:0.6rem; 
+    padding:0.4rem;
+    i{
+        color:#21295C;
+        font-size:1em;
+    }
+}

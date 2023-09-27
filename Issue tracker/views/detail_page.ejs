@@ -1,0 +1,107 @@
+<%- include('partials/_header'); %>
+
+
+<section class="create">
+    <div class="create__issue">
+        <a href="/issue_tracker/detail_page/bug?id=<%=project_id %>">CREATE BUG</a>
+    </div>
+</section>
+<section class="content">
+        <form id="form" method="post" action="/issue_tracker/detail_page?search=<%= project_id %>" autocomplete="off">
+            
+            <div class="form__control">
+                <label>Author</label>
+                <input type="text" name="author">
+            </div>
+            <div class="form__control">
+                <label>Title</label>
+                <input type="text" name="title">
+            </div>
+            <div class="form__control">
+                <label>Description</label>
+                <input type="text" name="description">
+            </div>
+            <div class="form__select">
+                <label>LABELS</label>
+                <div id="list" class="list">
+                    <input id="list__input" type="text" name="label">
+                </div>
+                <select id="select">
+                    <option value="">Select Option</option>
+                    <% for (let label of labels[0].label){ %>
+                    <option><%= label %></option>
+                     <% } %>
+                </select>
+            </div>
+            <input id="submit__btn" type="submit" value="Search">
+
+            <!-- <div class="form__control">
+                <label>AUTHOR</label>
+                <input class="form__input" type="text" name="author">
+            </div>
+            
+            <div class="form__control">
+                <label>TITLE</label>
+                <input class="form__input" type="text" name="title">
+            </div>
+            <div class="form__control">
+                <label>DESCRIPTION</label>
+                <input class="form__input" type="text" name="description">
+            </div>
+            <div class="form__control--select">
+                <label> LABELS </label>
+                <div id="select_tag" class="form__control--select__box">
+                    <input id="select__input" type="text" name="label" value="">
+                    <select id="form__select">
+                        <option value="">Select Option</option>
+                        < % for (let label of labels[0].label){ %>
+                        <option>< %= label %></option>
+                         < % } %>
+                    </select>
+                </div>
+            </div>
+
+            <input id="form__btn" type="submit" value="Search">
+              -->
+        </form>
+    <div class="content__table">
+
+        <table>
+            <thead>
+            <tr>
+                <td>NAME</td>
+                <td>DESCRIPTION</td>
+                <td>AUTHOR</td>
+                <td>LABELS</td>
+            </tr>
+            </thead>
+            <tbody id="tbody">
+        <% if (bugs.length !== 0){ %>
+                <% for (let bug of bugs){ %>
+                    <tr>
+                        <td><%=  bug.title %></td>
+                        <td><%= bug.description%></td>
+                        <td><%= bug.author%></td>
+                        <td>
+                            <div class="tag-container">
+                                <% for (let label of bug.label){ %>
+                                <div class="tag">
+                                    <span><%= label %></span>
+                                </div>
+                                <% } %> 
+                            </div>
+                        </td>
+                    </tr>
+        
+                    <% } %>
+                    </tbody>
+                </table>
+                <%  }else{ %>
+                <h3>No issue reported</h3>
+                <% } %>
+                
+    </div>
+</section>
+
+
+<%- include('partials/_footer'); %>
