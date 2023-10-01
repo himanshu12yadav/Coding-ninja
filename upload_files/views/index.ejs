@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('./partials/_navbar'); %>
+    <section class="container">
+        <div class="form">
+            <div class="form__heading">UPLOAD FILE</div>
+            <form method="post" action="/upload" enctype="multipart/form-data">
+                <div class="form__control">
+                    <input type="file" name="foo">
+                </div>
+                <div class="form__control">
+                    <input type="submit" value="Submit">
+                </div>
+
+            </form>
+        </div>
+        <div class="upload__files">
+            <table>
+                <thead>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>PATH</th>
+                </thead>
+                <tbody>
+                    <% for(let file of files){ %>
+                        <tr>
+                            <td><%= file.id %></td>
+                            <td><%= file.name %></td>
+                            <td><a id="view" href="/view/<%= file.id %>">View</a></td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    
+    
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+<script type="text/js" src="/js/index.js"></script>
+</html>

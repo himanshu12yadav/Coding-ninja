@@ -1,0 +1,154 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+nav{
+    height: 50px;
+    background-color: grey;
+}
+
+nav > ul{
+    list-style: none;
+    margin:0;
+    padding-left:5px;
+    padding-top:4px;
+}
+
+ul > li{
+    font-size: 1.5em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 800;
+}
+
+ul > li > a{
+    text-decoration: none;
+    color:white;
+}
+
+body{
+    background-color: cadetblue;
+}
+
+.container{
+    margin:2px 2px;
+}
+
+.form__heading{
+    text-align: center;
+    font-size: 1.5em;
+    margin-top:10px;
+    color:white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 800;
+}
+
+.form > form{
+    width: 100%;
+}
+
+.form > form .form__control{
+    display: block;
+    text-align: center;
+}
+
+.form > form .form__control input{
+    font-size: 1.2em;
+    margin:4px 4px;
+}
+
+.form > form .form__control input[type="submit"]{
+    padding:10px 30px;
+    font-size: 1.2em;
+    border-radius: 20px 20px;
+    border:none;
+}
+
+.upload__files{
+    width: 100vw;
+}
+
+.upload__files table{
+    text-align: center;
+    margin:10px auto;
+    border-collapse: collapse;
+}
+
+.upload__files table td,th{
+    border:2px solid black;
+}
+
+.upload__files table th{
+    height: 2rem;
+    padding-left: 1rem;
+    padding-right:1rem;
+    background-color: black;
+    color:white;
+}
+
+.upload__files table td{
+    height: 2.5rem;
+    padding: 0 0.5rem;
+}
+
+.upload__files table td > a{
+    text-decoration: none;
+    color:white;
+    font-size: 1em;
+}
+
+.heading{
+    font-size: 1.2em;
+    margin:2rem;
+    color:white;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid white;
+}
+
+.form__control-info{
+    display: block;
+    text-align: center;   
+    margin:2rem;
+}
+
+.form__control-info > input{
+    width: 50%;
+    height: 3rem;
+    border-radius: 20px 20px;
+    border:none;
+    outline-style: none;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 600;
+    color:cadetblue;
+}
+
+.table table{
+    width: 50%;
+    text-align: center;
+    margin:10px auto;
+    border-collapse: collapse;
+}
+
+.table table td, th{
+border:2px solid black;
+}
+
+.table table th{
+    height: 3rem;
+    padding-left: 1rem;
+    padding-right:1rem;
+    background-color: black;
+    color:white;    
+    font-size: 1.1em;
+}
+
+.table table td{
+    height: 2.5rem;
+    padding: 0 0.5rem;
+}
+
+.table table td:not(:first-child){
+    color:white;
+}
